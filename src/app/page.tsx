@@ -1,5 +1,3 @@
-'use client'
-
 import Game from './components/game/game.component'
 
 export default function Home() {
