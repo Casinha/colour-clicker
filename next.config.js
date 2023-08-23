@@ -1,19 +1,13 @@
 /** @type {import('next').NextConfig} */
-
-const isGithubActions = process.env.GITHUB_ACTIONS || false
-
-let assetPrefix = ""
-let basePath = "/"
-
-if(isGithubActions) {
-    const repo = process.env.GITHUB_REPOSITORY.replace(/.*?\//, '')
-    assetPrefix = `/${repo}/`,
-    basePath = `/${repo}`
+const nextConfig = {
 }
 
-const nextConfig = {
-    assetPrefix,
-    basePath
+if (process.env.GITHUB_ACTIONS) {
+    const repo = process.env.GITHUB_REPOSITORY.replace(/.*?\//, '')
+    
+    nextConfig.assetPrefix = `/${repo}/`
+    nextConfig.basePath = `/${repo}`
+    nextConfig.output = "export"
 }
 
 module.exports = nextConfig
