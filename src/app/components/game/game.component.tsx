@@ -227,8 +227,8 @@ export default function Game() {
 
     return (
         <div className="flex border-solid border-2 border-black shadow shadow-black rounded-md flex-1 w-full">
-            <audio ref={successRef} src="/success_bell.mp3"></audio>
-            <audio ref={failRef} src="/fail.mp3"></audio>
+            <audio ref={successRef} src="/colour-clicker/success_bell.mp3"></audio>
+            <audio ref={failRef} src="/colour-clicker/fail.mp3"></audio>
             {game}
         </div>
     )
