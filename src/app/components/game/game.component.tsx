@@ -173,7 +173,7 @@ export default function Game() {
         setState(tState)
 
         setTimer(setInterval(() => {
-            setState((state) => { return { ...state, time: Math.round((state.time + 0.1) * 100) / 100 } })
+            setState((state) => { return state.gameState == "playing" ? { ...state, time: Math.round((state.time + 0.1) * 100) / 100 } : state })
         }, 100))
         console.log(timer)
     }
