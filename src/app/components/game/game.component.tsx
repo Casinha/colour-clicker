@@ -74,7 +74,7 @@ export default function Game() {
         const items: JSX.Element[] = []
         for (let i = 0; i < state.itemCount; i++) {
             const key = `item-${i}`
-            items.push(<div key={key} className="colour-item" style={{ backgroundColor: i == state.divergentIndex ? state.divergentColour : state.currentColour }} onClick={() => { clickItem(i) }}></div>)
+            items.push(<div key={key} className="w-14 h-14 md:w-24 md:h-24" style={{ backgroundColor: i == state.divergentIndex ? state.divergentColour : state.currentColour }} onClick={() => { clickItem(i) }}></div>)
         }
 
         return (
@@ -92,7 +92,7 @@ export default function Game() {
                         </div>
                     </div>
                 </div>
-                <div className="flex-1 flex items-center justify-center">
+                <div className="flex-1 flex items-start md:items-center justify-center">
                     <div className={className}>
                         {items}
                     </div>
@@ -227,8 +227,8 @@ export default function Game() {
 
     return (
         <div className="flex border-solid border-2 border-black shadow shadow-black rounded-md flex-1 w-full">
-            <audio ref={successRef} src="/colour-clicker/success_bell.mp3"></audio>
-            <audio ref={failRef} src="/colour-clicker/fail.mp3"></audio>
+            <audio ref={successRef} src="./success_bell.mp3"></audio>
+            <audio ref={failRef} src="./fail.mp3"></audio>
             {game}
         </div>
     )
