@@ -92,7 +92,7 @@ export default function Game() {
                         </div>
                     </div>
                 </div>
-                <div className="flex-1 flex items-start md:items-center justify-center">
+                <div className="flex-1 flex items-center justify-center">
                     <div className={className}>
                         {items}
                     </div>
