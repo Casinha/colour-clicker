@@ -240,7 +240,6 @@ export default function Game() {
                     <div className="button m-10" onClick={startGame}>Restart</div>
                 </div>
                 <div className="flex-1 flex flex-col items-center min-h-0">
-                    <div>Swatch:</div>
                     <div className="flex flex-wrap justify-start mx-10 md:max-w-lg overflow-y-auto">
                         {troubleColourElements}
                     </div>
