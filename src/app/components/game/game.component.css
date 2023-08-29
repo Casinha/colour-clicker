@@ -1,5 +1,6 @@
 .button {
-    border: 2px black solid;
+    border: 10px white solid;
+    outline: 20px black double;
     border-radius: 10px;
     min-width: 100px;
     height: 40px;
@@ -8,12 +9,7 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    margin: 5px;
-}
-
-.button:hover {
-    background-color: black;
-    color: white;
+    margin: 30px;
 }
 
 .icon-button {
@@ -34,9 +30,6 @@
 }
 
 .colour-item {
-    width: 90px;
-    height: 90px;
-    display: inline-block;
     cursor: pointer;
     background-color: #555;
     box-shadow: 0 0 2px 0px #555;
@@ -45,6 +38,50 @@
 .colour-item:hover {
     animation: shake 0.5s;
     animation-iteration-count: infinite;
+}
+
+.squint {
+    display: none;
+}
+
+.eye {
+    position: relative;
+    display: inline-block;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.eye:after {
+    /*pupil*/
+    position: absolute;
+    bottom: 14px;
+    right: 6px;
+    width: 6px;
+    height: 6px;
+    background: #000;
+    border-radius: 50%;
+    content: " ";
+}
+
+
+
+@media (hover: hover) {
+    /* when hover is supported */
+    .colour-item:hover .squint {
+        display: inline;
+    }
+
+    .colour-item:hover .eye {
+        display: none;
+    }
+
+    .button:hover {
+        font-weight: 800;
+        animation: shake 1.5s;
+        animation-iteration-count: infinite;
+    }
 }
 
 @keyframes shake {
@@ -89,6 +126,6 @@
     }
 
     100% {
-        transform: translate(0.5px, -1px) rotate(-0.5deg);
+        transform: translate(0.5px, 0.5px) rotate(-0.5deg);
     }
 }
